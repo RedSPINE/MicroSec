@@ -1,0 +1,14 @@
+[Unit]
+Description=Crawler usec service
+After=network.target
+StartLimitIntervalSec=1
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ndi
+ExecStart=/home/ndi/Documents/MicroSec/c/server
+
+[Install]
+WantedBy=multi-user.target
