@@ -6,6 +6,7 @@
 
 #include <arpa/inet.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
@@ -14,9 +15,9 @@
 
 int main(int argc, char** argv) {
 
-    if(argc !=3)
+    if(argc < 3)
     {
-        printf("wrong usage of client, expected : ./client <url> <sequence>");
+        printf("wrong usage of client, expected : ./client <url> <sequence> [port]");
         return -1;
     }
 
